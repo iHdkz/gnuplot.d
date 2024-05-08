@@ -1,6 +1,0 @@
-#!/usr/bin/env gnuplot -pdc
-
-reset
-
-N=2**10
-array F[N]
