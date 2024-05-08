@@ -1,0 +1,28 @@
+#!/usr/bin/env gnuplot -pdc
+
+set ticslevel 0
+
+set parametric
+set hidden3d
+
+set xrange [-4:4]
+set yrange [-4:4]
+set zrange [0:4]
+
+set urange [0:1]
+set vrange [0:2]
+
+set arrow 1 from 0,0,0 to 4,0,0
+set arrow 2 from 0,0,0 to 0,4,0
+set arrow 3 from 0,0,0 to 0,0,4
+
+unset border
+
+set isosample 30
+
+splot u,v,2-2*u-v
+replot 0,v,2-2*u-v
+replot u,0,2-2*u-v
+replot 0,0,2-2*u-v
+
+pause -1

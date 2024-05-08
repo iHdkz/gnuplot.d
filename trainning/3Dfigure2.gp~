@@ -1,0 +1,12 @@
+#!/usr/bin/env gnuplot -pdc
+
+set ticslevel 0
+
+set parametric
+
+splot u,v,2-2*u-v
+replot 0,v,2-2*u-v
+replot u,0,2-2*u-v
+replot 0,0,2-2*u-v
+
+pause -1

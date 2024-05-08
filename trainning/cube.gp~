@@ -1,0 +1,5 @@
+#!/usr/bin/env gnuplot -pdc
+
+reset
+set view equal xyz
+splot "dice.txt" with lines linetype 7 linewidth 3
